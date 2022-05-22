@@ -31,13 +31,13 @@ namespace GrathWpf
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            double shag = 0.5;
-            int count = (int)((Convert.ToInt32(bTB.Text) - Convert.ToInt32(aTB.Text)) / shag)+1;
+            double shag = 0.2;
+            int count = (int)((Convert.ToDouble(bTB.Text) - Convert.ToDouble(aTB.Text)) / shag)+1;
             double[] dataX = new double[count];
             double[] dataY = new double[count] ;
 
             int ind = 0;
-            for (double z= Convert.ToDouble(aTB.Text);z<= Convert.ToDouble(bTB.Text); z += shag)
+            for (double z= Convert.ToDouble(aTB.Text);z< Convert.ToDouble(bTB.Text); z += shag)
             {
                 dataX[ind] = z;
                 dataY[ind] = func(z);
